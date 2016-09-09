@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  margin: 0;
+  padding: 0;
+}
+
+#gameScreen {
+  font-size: 0;
+}
+
+.cellRow {
+  white-space: nowrap;
+}
+
+.dead {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  width: 1em;
+  height: 1em;
+  border: solid 0.1em gray;
+  outline: none;
+}
+
+.alive {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  width: 1em;
+  height: 1em;
+  outline: none;
+}
