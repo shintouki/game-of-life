@@ -341,11 +341,13 @@ var FullApp = React.createClass({
       cellStatus: cellStatusArr,
       generation: 0,
       interval: "",
-      runButtonDisabled: false
+      runButtonDisabled: true
     };
   },
 
-  componentWillMount: function componentWillMount() {},
+  componentWillMount: function componentWillMount() {
+    this.runButtonClicked();
+  },
 
   componentWillUnmount: function componentWillUnmount() {},
 
