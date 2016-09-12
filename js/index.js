@@ -415,52 +415,43 @@ var FullApp = React.createClass({
 
   numLiveNeighbors: function numLiveNeighbors(row, col, cellStatusCopy) {
     var numLive = 0;
-    // console.log("checking..." + " row: " + row + " col: " + col);
     if (row - 1 >= 0) {
       if (cellStatusCopy[row - 1][col] === "alive") {
-        // console.log("alive: " + " row: " + (row-1) + " col: " + col);
         numLive++;
       }
     }
     if (col - 1 >= 0) {
       if (cellStatusCopy[row][col - 1] === "alive") {
-        // console.log("alive: " + " row: " + row + " col: " + (col-1));
         numLive++;
       }
     }
     if (row - 1 >= 0 && col - 1 >= 0) {
       if (cellStatusCopy[row - 1][col - 1] === "alive") {
-        // console.log("alive: " + " row: " + row-1 + " col: " + (col-1));
         numLive++;
       }
     }
     if (row + 1 < this.state.numRows) {
       if (cellStatusCopy[row + 1][col] === "alive") {
-        // console.log("alive: " + " row: " + (row+1) + " col: " + col);
         numLive++;
       }
     }
     if (col + 1 < this.state.numCols) {
       if (cellStatusCopy[row][col + 1] === "alive") {
-        // console.log("alive: " + " row: " + row + " col: " + (col+1));
         numLive++;
       }
     }
     if (row + 1 < this.state.numRows && col + 1 < this.state.numCols) {
       if (cellStatusCopy[row + 1][col + 1] === "alive") {
-        // console.log("alive: " + " row: " + (row+1) + " col: " + (col+1));
         numLive++;
       }
     }
     if (row - 1 >= 0 && col + 1 < this.state.numCols) {
       if (cellStatusCopy[row - 1][col + 1] === "alive") {
-        // console.log("alive: " + " row: " + (row-1) + " col: " + (col+1));
         numLive++;
       }
     }
     if (row + 1 < this.state.numRows && col - 1 >= 0) {
       if (cellStatusCopy[row + 1][col - 1] === "alive") {
-        // console.log("alive: " + " row: " + (row+1) + " col: " + (col-1));
         numLive++;
       }
     }
