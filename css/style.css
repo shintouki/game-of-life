@@ -29,5 +29,6 @@ body {
   background-color: white;
   width: 1em;
   height: 1em;
+  border: solid 0.1em gray;
   outline: none;
 }
