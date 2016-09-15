@@ -323,20 +323,20 @@ let ButtonButtons = React.createClass({
 let FullApp = React.createClass({
   displayName: "FullApp",
 
-  smallSize: 30,
-  medSize: 40,
-  largeSize: 50,
+  smallSize: [20, 30],
+  medSize: [40, 60],
+  largeSize: [50, 80],
   slowSpeed: 1000,
   medSpeed: 500,
   fastSpeed: 100,
 
   getInitialState: function getInitialState() {
 
-    let cellStatusArr = this.randomCellStatusArr(this.medSize, this.medSize);
+    let cellStatusArr = this.randomCellStatusArr(this.medSize[0], this.medSize[1]);
 
     return {
-      numRows: this.medSize,
-      numCols: this.medSize,
+      numRows: this.medSize[0],
+      numCols: this.medSize[1],
       speed: this.fastSpeed,
       cellStatus: cellStatusArr,
       generation: 0,
@@ -578,12 +578,12 @@ let FullApp = React.createClass({
   },
 
   smallScreenButtonClicked: function smallScreenButtonClicked() {
-    let cellStatusArr = this.initCellStatusArr(this.smallSize, this.smallSize);
+    let cellStatusArr = this.initCellStatusArr(this.smallSize[0], this.smallSize[1]);
     clearInterval(this.state.interval);
 
     this.setState({
-      numRows: this.smallSize,
-      numCols: this.smallSize,
+      numRows: this.smallSize[0],
+      numCols: this.smallSize[1],
       cellStatus: cellStatusArr,
       interval: "",
       generation: 0,
@@ -592,12 +592,12 @@ let FullApp = React.createClass({
   },
 
   medScreenButtonClicked: function medScreenButtonClicked() {
-    let cellStatusArr = this.initCellStatusArr(this.medSize, this.medSize);
+    let cellStatusArr = this.initCellStatusArr(this.medSize[0], this.medSize[1]);
     clearInterval(this.state.interval);
 
     this.setState({
-      numRows: this.medSize,
-      numCols: this.medSize,
+      numRows: this.medSize[0],
+      numCols: this.medSize[1],
       cellStatus: cellStatusArr,
       interval: "",
       generation: 0,
@@ -606,12 +606,12 @@ let FullApp = React.createClass({
   },
 
   largeScreenButtonClicked: function largeScreenButtonClicked() {
-    let cellStatusArr = this.initCellStatusArr(this.largeSize, this.largeSize);
+    let cellStatusArr = this.initCellStatusArr(this.largeSize[0], this.largeSize[1]);
     clearInterval(this.state.interval);
 
     this.setState({
-      numRows: this.largeSize,
-      numCols: this.largeSize,
+      numRows: this.largeSize[0],
+      numCols: this.largeSize[1],
       cellStatus: cellStatusArr,
       interval: "",
       generation: 0,
