@@ -3,15 +3,13 @@ body {
   font-family: 'Cinzel', serif;
   margin: 0;
   padding: 0;
-}
+  background-color: #CD5360; }
 
 #gameScreen {
-  font-size: 0;
-}
+  font-size: 0; }
 
 .cellRow {
-  white-space: nowrap;
-}
+  white-space: nowrap; }
 
 .dead {
   margin: 0;
@@ -20,8 +18,7 @@ body {
   width: 1em;
   height: 1em;
   border: solid 0.1em gray;
-  outline: none;
-}
+  outline: none; }
 
 .alive {
   margin: 0;
@@ -30,5 +27,6 @@ body {
   width: 1em;
   height: 1em;
   border: solid 0.1em gray;
-  outline: none;
-}
+  outline: none; }
+
+/*# sourceMappingURL=style.css.map */
