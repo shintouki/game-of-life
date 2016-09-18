@@ -148,7 +148,6 @@ var GameScreen = React.createClass({
   render: function render() {
     var numRows = this.props.numRows;
     var multipleRows = [];
-    // console.log(numRows);
     for (var i = 0; i < numRows; i++) {
       var cellStatusRow = this.props.cellStatus[i];
 
@@ -336,11 +335,11 @@ var FullApp = React.createClass({
 
   getInitialState: function getInitialState() {
 
-    var cellStatusArr = this.randomCellStatusArr(this.medSize, this.medSize);
+    var cellStatusArr = this.randomCellStatusArr(this.medSize[0], this.medSize[1]);
 
     return {
-      numRows: this.medSize,
-      numCols: this.medSize,
+      numRows: this.medSize[0],
+      numCols: this.medSize[1],
       speed: this.fastSpeed,
       cellStatus: cellStatusArr,
       generation: 0,
