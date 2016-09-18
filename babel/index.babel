@@ -111,7 +111,6 @@ let CellRow = React.createClass({
     let numCols = this.props.numCols;
     let singleRow = [];
     for (let i=0; i<numCols; i++) {
-      // console.log(i + ": " + this.props.cellStatus);
       let cellStatusIndivCell = this.props.cellStatusRow[i];
       singleRow.push(
         <SingleCell
@@ -396,52 +395,43 @@ let FullApp = React.createClass({
   
   numLiveNeighbors: function(row, col, cellStatusCopy) {
     let numLive = 0;
-    // console.log("checking..." + " row: " + row + " col: " + col);
     if (row - 1 >= 0) {
       if (cellStatusCopy[row-1][col] === "alive") {
-        // console.log("alive: " + " row: " + (row-1) + " col: " + col);
         numLive++;
       }
     }
     if (col - 1 >= 0) {
       if (cellStatusCopy[row][col-1] === "alive") {
-        // console.log("alive: " + " row: " + row + " col: " + (col-1));
         numLive++;
       }
     }
     if (row - 1 >= 0 && col - 1 >= 0) {
       if (cellStatusCopy[row-1][col-1] === "alive") {
-        // console.log("alive: " + " row: " + row-1 + " col: " + (col-1));
         numLive++;
       }
     }
     if (row + 1 < this.state.numRows) {
       if (cellStatusCopy[row+1][col] === "alive") {
-        // console.log("alive: " + " row: " + (row+1) + " col: " + col);
         numLive++;
       }
     }
     if (col + 1 < this.state.numCols) {
       if (cellStatusCopy[row][col+1] === "alive") {
-        // console.log("alive: " + " row: " + row + " col: " + (col+1));
         numLive++;
       }
     }
     if (row + 1 < this.state.numRows && col + 1 < this.state.numCols) {
       if (cellStatusCopy[row+1][col+1] === "alive") {
-        // console.log("alive: " + " row: " + (row+1) + " col: " + (col+1));
         numLive++;
       }
     }
     if (row - 1 >= 0 && col + 1 < this.state.numCols) {
       if (cellStatusCopy[row-1][col+1] === "alive") {
-        // console.log("alive: " + " row: " + (row-1) + " col: " + (col+1));
         numLive++;
       }
     }
     if (row + 1 < this.state.numRows && col - 1 >= 0) {
       if (cellStatusCopy[row+1][col-1] === "alive") {
-        // console.log("alive: " + " row: " + (row+1) + " col: " + (col-1));
         numLive++;
       }
     }
