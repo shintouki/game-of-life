@@ -1,4 +1,4 @@
-var RunButton = React.createClass({
+let RunButton = React.createClass({
   handleRunButtonClick: function() {
     this.props.runButtonClicked();
   },
@@ -14,7 +14,7 @@ var RunButton = React.createClass({
   }
 });
 
-var PauseButton = React.createClass({
+let PauseButton = React.createClass({
   handlePauseButtonClick: function() {
     this.props.pauseButtonClicked();
   },
@@ -29,7 +29,7 @@ var PauseButton = React.createClass({
   }
 });
 
-var ClearButton = React.createClass({
+let ClearButton = React.createClass({
   handleClearButtonClick: function() {
     this.props.clearButtonClicked();
   },
@@ -44,7 +44,7 @@ var ClearButton = React.createClass({
   }
 });
 
-var NextButton = React.createClass({
+let NextButton = React.createClass({
   handleNextButtonClick: function () {
     this.props.nextButtonClicked();
   },
@@ -59,9 +59,9 @@ var NextButton = React.createClass({
   }
 });
 
-var GenerationCounter = React.createClass({
+let GenerationCounter = React.createClass({
   render: function () {
-    var generationNum = this.props.generation;
+    let generationNum = this.props.generation;
     
     return (
       <p>Generation: {generationNum}</p>
@@ -69,7 +69,7 @@ var GenerationCounter = React.createClass({
   }
 });
 
-var TopButtons = React.createClass({
+let TopButtons = React.createClass({
   render: function () {
     return (
       <div>
@@ -89,13 +89,13 @@ var TopButtons = React.createClass({
   }
 });
 
-var SingleCell = React.createClass({
+let SingleCell = React.createClass({
   handleCellClick: function () {
     this.props.cellClicked(this.props.rowNum, this.props.colNum);
   },
   
   render: function () {
-    var cellStatus = this.props.cellStatusIndivCell;
+    let cellStatus = this.props.cellStatusIndivCell;
     
     return (
       <input
@@ -106,13 +106,13 @@ var SingleCell = React.createClass({
   }
 });
 
-var CellRow = React.createClass({
+let CellRow = React.createClass({
   render: function () {
-    var numCols = this.props.numCols;
-    var singleRow = [];
+    let numCols = this.props.numCols;
+    let singleRow = [];
     for (let i=0; i<numCols; i++) {
       // console.log(i + ": " + this.props.cellStatus);
-      var cellStatusIndivCell = this.props.cellStatusRow[i];
+      let cellStatusIndivCell = this.props.cellStatusRow[i];
       singleRow.push(
         <SingleCell
           cellClicked={this.props.cellClicked}
@@ -132,14 +132,13 @@ var CellRow = React.createClass({
   }
 });
 
-var GameScreen = React.createClass({
+let GameScreen = React.createClass({
   
   render: function () {
-    var numRows = this.props.numRows;
-    var multipleRows = [];
-    // console.log(numRows);
+    let numRows = this.props.numRows;
+    let multipleRows = [];
     for (let i=0; i<numRows; i++) {
-      var cellStatusRow = this.props.cellStatus[i];
+      let cellStatusRow = this.props.cellStatus[i];
     
       multipleRows.push(
         <CellRow
@@ -159,7 +158,7 @@ var GameScreen = React.createClass({
   }
 });
 
-var SizeSmallButton = React.createClass({
+let SizeSmallButton = React.createClass({
   
   handleSmallScreenButton: function () {
     this.props.smallScreenButtonClicked();
@@ -175,7 +174,7 @@ var SizeSmallButton = React.createClass({
   }
 });
 
-var SizeMedButton = React.createClass({
+let SizeMedButton = React.createClass({
   
   handleMedScreenButton: function () {
     this.props.medScreenButtonClicked();
@@ -191,7 +190,7 @@ var SizeMedButton = React.createClass({
   }
 });
 
-var SizeLargeButton = React.createClass({
+let SizeLargeButton = React.createClass({
   
   handleLargeScreenButton: function () {
     this.props.largeScreenButtonClicked();
@@ -207,7 +206,7 @@ var SizeLargeButton = React.createClass({
   }
 });
 
-var SizeButtons = React.createClass({
+let SizeButtons = React.createClass({
   render: function () {
     return (
       <div>
@@ -223,7 +222,7 @@ var SizeButtons = React.createClass({
   }
 });
 
-var SpeedSlowButton = React.createClass({
+let SpeedSlowButton = React.createClass({
   handleSlowSpeedButtonClick: function () {
     this.props.slowSpeedButtonClicked();
   },
@@ -238,7 +237,7 @@ var SpeedSlowButton = React.createClass({
   }
 });
 
-var SpeedMedButton = React.createClass({
+let SpeedMedButton = React.createClass({
   handleMedSpeedButtonClick: function () {
     this.props.medSpeedButtonClicked();
   },
@@ -253,7 +252,7 @@ var SpeedMedButton = React.createClass({
   }
 });
 
-var SpeedFastButton = React.createClass({
+let SpeedFastButton = React.createClass({
   handleFastSpeedButtonClick: function () {
     this.props.fastSpeedButtonClicked();
   },
@@ -268,7 +267,7 @@ var SpeedFastButton = React.createClass({
   }
 });
 
-var SpeedButtons = React.createClass({
+let SpeedButtons = React.createClass({
   render: function () {
     return (
       <div>
@@ -284,7 +283,7 @@ var SpeedButtons = React.createClass({
   }
 });
 
-var ButtonButtons = React.createClass({
+let ButtonButtons = React.createClass({
   render: function () {
     return (
       <div>
@@ -301,7 +300,7 @@ var ButtonButtons = React.createClass({
   }
 });
 
-var FullApp = React.createClass({
+let FullApp = React.createClass({
   smallSize: [20, 30],
   medSize: [40, 60],
   largeSize: [50, 80],
@@ -363,8 +362,8 @@ var FullApp = React.createClass({
   },
   
   runButtonClicked: function() {
-    var goToNextGen = this.goToNextGeneration;
-    var nextGenInterval = setInterval(function() {
+    let goToNextGen = this.goToNextGeneration;
+    let nextGenInterval = setInterval(function() {
       goToNextGen();
     }, this.state.speed);
     
@@ -384,7 +383,7 @@ var FullApp = React.createClass({
   },
   
   clearButtonClicked: function() {
-    var cellStatusArr = this.initCellStatusArr(this.state.numRows, this.state.numCols);
+    let cellStatusArr = this.initCellStatusArr(this.state.numRows, this.state.numCols);
     clearInterval(this.state.interval);
     
     this.setState({
@@ -545,7 +544,7 @@ var FullApp = React.createClass({
       }
     }
     
-    var gen = this.state.generation + 1;
+    let gen = this.state.generation + 1;
     
     this.setState({
       cellStatus: cellStatusNew,
@@ -558,7 +557,7 @@ var FullApp = React.createClass({
   },
   
   cellClicked: function(row, col) {
-    var cellStatusArr = this.state.cellStatus;
+    let cellStatusArr = this.state.cellStatus;
     if (cellStatusArr[row][col] === "dead") {
       cellStatusArr[row][col] = "alive"
     }
@@ -616,8 +615,8 @@ var FullApp = React.createClass({
   slowSpeedButtonClicked: function() {
     clearInterval(this.state.interval);
     
-    var goToNextGen = this.goToNextGeneration;
-    var nextGenInterval = setInterval(function() {
+    let goToNextGen = this.goToNextGeneration;
+    let nextGenInterval = setInterval(function() {
       goToNextGen();
     }, this.slowSpeed);
     
@@ -630,8 +629,8 @@ var FullApp = React.createClass({
   medSpeedButtonClicked: function() {
     clearInterval(this.state.interval);
     
-    var goToNextGen = this.goToNextGeneration;
-    var nextGenInterval = setInterval(function() {
+    let goToNextGen = this.goToNextGeneration;
+    let nextGenInterval = setInterval(function() {
       goToNextGen();
     }, this.medSpeed);
     
@@ -644,8 +643,8 @@ var FullApp = React.createClass({
   fastSpeedButtonClicked: function() {
     clearInterval(this.state.interval);
     
-    var goToNextGen = this.goToNextGeneration;
-    var nextGenInterval = setInterval(function() {
+    let goToNextGen = this.goToNextGeneration;
+    let nextGenInterval = setInterval(function() {
       goToNextGen();
     }, this.fastSpeed);
     
