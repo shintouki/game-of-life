@@ -30,7 +30,7 @@ body {
   outline: none; }
 
 .speedButtons {
-  
+  display: inline;
 }
 
 /*# sourceMappingURL=style.css.map */

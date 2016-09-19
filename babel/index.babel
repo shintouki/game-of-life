@@ -269,14 +269,16 @@ let SpeedFastButton = React.createClass({
 let SpeedButtons = React.createClass({
   render: function () {
     return (
-      <div className="speedButtons">
+      <div>
         <p>Speed:</p>
-        <SpeedSlowButton 
-          slowSpeedButtonClicked={this.props.slowSpeedButtonClicked} />
-        <SpeedMedButton 
-          medSpeedButtonClicked={this.props.medSpeedButtonClicked} />
-        <SpeedFastButton 
-          fastSpeedButtonClicked={this.props.fastSpeedButtonClicked} />
+        <div className="speedButtons">
+          <SpeedSlowButton 
+            slowSpeedButtonClicked={this.props.slowSpeedButtonClicked} />
+          <SpeedMedButton 
+            medSpeedButtonClicked={this.props.medSpeedButtonClicked} />
+          <SpeedFastButton 
+            fastSpeedButtonClicked={this.props.fastSpeedButtonClicked} />
+        </div>
       </div>
     );
   }
