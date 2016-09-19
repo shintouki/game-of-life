@@ -269,7 +269,7 @@ let SpeedFastButton = React.createClass({
 let SpeedButtons = React.createClass({
   render: function () {
     return (
-      <div>
+      <div className="speedButtons">
         <p>Speed:</p>
         <SpeedSlowButton 
           slowSpeedButtonClicked={this.props.slowSpeedButtonClicked} />
