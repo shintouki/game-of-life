@@ -287,18 +287,22 @@ var SpeedButtons = React.createClass({
   render: function render() {
     return React.createElement(
       "div",
-      { className: "speedButtons" },
+      null,
       React.createElement(
         "p",
         null,
         "Speed:"
       ),
-      React.createElement(SpeedSlowButton, {
-        slowSpeedButtonClicked: this.props.slowSpeedButtonClicked }),
-      React.createElement(SpeedMedButton, {
-        medSpeedButtonClicked: this.props.medSpeedButtonClicked }),
-      React.createElement(SpeedFastButton, {
-        fastSpeedButtonClicked: this.props.fastSpeedButtonClicked })
+      React.createElement(
+        "div",
+        { className: "speedButtons" },
+        React.createElement(SpeedSlowButton, {
+          slowSpeedButtonClicked: this.props.slowSpeedButtonClicked }),
+        React.createElement(SpeedMedButton, {
+          medSpeedButtonClicked: this.props.medSpeedButtonClicked }),
+        React.createElement(SpeedFastButton, {
+          fastSpeedButtonClicked: this.props.fastSpeedButtonClicked })
+      )
     );
   }
 });
