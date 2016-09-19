@@ -287,7 +287,7 @@ var SpeedButtons = React.createClass({
   render: function render() {
     return React.createElement(
       "div",
-      null,
+      { className: "speedButtons" },
       React.createElement(
         "p",
         null,
