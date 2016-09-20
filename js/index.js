@@ -223,7 +223,7 @@ var SizeButtons = React.createClass({
       null,
       React.createElement(
         "p",
-        null,
+        { className: "sizeText" },
         "Size:"
       ),
       React.createElement(SizeSmallButton, {
@@ -290,7 +290,7 @@ var SpeedButtons = React.createClass({
       null,
       React.createElement(
         "p",
-        null,
+        { className: "speedText" },
         "Speed:"
       ),
       React.createElement(
