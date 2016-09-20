@@ -37,6 +37,7 @@ body {
 .speedText {
   display: inline-block;
   margin-right: 0.5em;
+  margin-top: -1em;
 }
 
 /*# sourceMappingURL=style.css.map */
