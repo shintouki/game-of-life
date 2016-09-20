@@ -209,7 +209,7 @@ let SizeButtons = React.createClass({
   render: function () {
     return (
       <div>
-        <p>Size:</p>
+        <p className="sizeText">Size:</p>
         <SizeSmallButton
           smallScreenButtonClicked={this.props.smallScreenButtonClicked} />
         <SizeMedButton
@@ -270,7 +270,7 @@ let SpeedButtons = React.createClass({
   render: function () {
     return (
       <div>
-        <p>Speed:</p>
+        <p className="speedText">Speed:</p>
         <div className="speedButtons">
           <SpeedSlowButton 
             slowSpeedButtonClicked={this.props.slowSpeedButtonClicked} />

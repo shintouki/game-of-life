@@ -29,8 +29,22 @@ body {
   border: solid 0.1em gray;
   outline: none; }
 
+.sizeText {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+.sizeButtons {
+  display: inline-block;
+}
+
+.speedText {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
 .speedButtons {
-  display: inline;
+  display: inline-block;
 }
 
 /*# sourceMappingURL=style.css.map */
